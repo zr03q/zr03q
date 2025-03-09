@@ -1,0 +1,99 @@
+Sure! Here are some basic SQL queries to help you get started:
+
+### 1. Select Query
+**Purpose:** Retrieve data from a database.
+
+```sql
+SELECT column1, column2
+FROM table_name;
+```
+
+**Example:**
+```sql
+SELECT first_name, last_name
+FROM employees;
+```
+
+### 2. Insert Query
+**Purpose:** Insert new data into a database table.
+
+```sql
+INSERT INTO table_name (column1, column2)
+VALUES (value1, value2);
+```
+
+**Example:**
+```sql
+INSERT INTO employees (first_name, last_name)
+VALUES ('John', 'Doe');
+```
+
+### 3. Update Query
+**Purpose:** Update existing data in a database table.
+
+```sql
+UPDATE table_name
+SET column1 = value1, column2 = value2
+WHERE condition;
+```
+
+**Example:**
+```sql
+UPDATE employees
+SET last_name = 'Smith'
+WHERE employee_id = 1;
+```
+
+### 4. Delete Query
+**Purpose:** Delete data from a database table.
+
+```sql
+DELETE FROM table_name
+WHERE condition;
+```
+
+**Example:**
+```sql
+DELETE FROM employees
+WHERE employee_id = 1;
+```
+
+### 5. Create Table
+**Purpose:** Create a new table in the database.
+
+```sql
+CREATE TABLE table_name (
+    column1 datatype,
+    column2 datatype,
+    ...
+);
+```
+
+**Example:**
+```sql
+CREATE TABLE employees (
+    employee_id INT PRIMARY KEY,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    hire_date DATE
+);
+```
+
+### 6. Joins
+**Purpose:** Combine rows from two or more tables based on a related column.
+
+**Inner Join Example:**
+```sql
+SELECT employees.first_name, departments.department_name
+FROM employees
+INNER JOIN departments ON employees.department_id = departments.department_id;
+```
+
+**Left Join Example:**
+```sql
+SELECT employees.first_name, departments.department_name
+FROM employees
+LEFT JOIN departments ON employees.department_id = departments.department_id;
+```
+
+These queries cover the most common operations you'll need when working with SQL databases. Let me know if you need more examples or have specific questions!
